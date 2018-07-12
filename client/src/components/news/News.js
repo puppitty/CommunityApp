@@ -82,14 +82,18 @@ class News extends Component {
                       <img
                         className="img-thumbnail"
                         style={{ width: "70px", height: "70px" }}
-                        src={article.multimedia.length > 0 ? article.multimedia[0].url : 'http://via.placeholder.com/60x60'}
+                        src={article.multimedia.length > 0 ? article.multimedia[0].url : 'http://via.placeholder.com/70x70'}
                         alt={article.title}
                       /> &nbsp;&nbsp;&nbsp;&nbsp;
-                      <strong>{article.title} -{" "}
-                        {moment(article.updated_date).format(
-                          "Do	MMMM YYYY hh:mm:ss a"
-                        )} </strong>
+                      <strong>{article.title} </strong> -{" "} {article.abstract} -{" "}
+                      {moment(article.updated_date).format(
+                        "Do	MMMM YYYY hh:mm:ss a"
+                      )}
+
                     </a>
+
+
+
                     {/*<span
                       className="badge badge-primary badge-pill"
                       onClick={() => this.saveArticle(article._id)}
