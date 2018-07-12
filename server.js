@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const users = require("./routes/api/users");
 const posts = require("./routes/api/posts");
 const nyt = require("./routes/api/nyt");
+const weather = require("./routes/api/weather");
 
 const bodyParser = require("body-parser");
 const passport = require("passport");
@@ -36,6 +37,9 @@ app.use("/api/posts", posts);
 
 //use routes to get news
 app.use("/api/nyt", nyt);
+
+//use routes to get weather
+app.use("/api/weather", weather);
 
 //serve static assets in production
 if (process.env.NODE_ENV === "production") {
