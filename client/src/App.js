@@ -50,9 +50,7 @@ class App extends Component {
               <Route exact path="/login" component={Login} />
 
               <Route exact path="/register" component={Register} />
-              <Switch>
-                <PrivateRoute exact path="/news" component={News} />
-              </Switch>
+
               <Switch>
                 <PrivateRoute exact path="/posts" component={Posts} />
               </Switch>
@@ -61,6 +59,9 @@ class App extends Component {
               </Switch>
               <Switch>
                 <PrivateRoute exact path="/board" component={Board} />
+              </Switch>
+              <Switch>
+                <PrivateRoute exact path="/news" component={News} />
               </Switch>
               <Switch>
                 <PrivateRoute exact path="/weather" component={Weather} />

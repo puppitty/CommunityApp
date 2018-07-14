@@ -85,14 +85,14 @@ class News extends Component {
                         src={article.multimedia.length > 0 ? article.multimedia[0].url : 'http://via.placeholder.com/70x70'}
                         alt={article.title}
                       /> &nbsp;&nbsp;&nbsp;&nbsp;
-                      <strong>{article.title} </strong> -{" "} {article.abstract} -{" "}
+                      <strong>{article.title} </strong> -{" "}
+                      <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      {article.abstract} -{" "}
                       {moment(article.updated_date).format(
                         "Do	MMMM YYYY hh:mm:ss a"
                       )}
 
                     </a>
-
-
 
                     {/*<span
                       className="badge badge-primary badge-pill"
