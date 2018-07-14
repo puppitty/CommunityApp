@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import FaPencil from 'react-icons/lib/fa/pencil'
 import FaTrash from 'react-icons/lib/fa/trash'
 import FaFloppyO from 'react-icons/lib/fa/floppy-o'
+import Dragabble from 'react-draggable';
+
 
 class Note extends Component {
 	constructor(props) {
@@ -87,7 +89,11 @@ class Note extends Component {
 		)
 	}
 	render() {
-		return this.state.editing ? this.renderForm() : this.renderDisplay()
+		return (
+			<Dragabble>
+				{this.state.editing ? this.renderForm() : this.renderDisplay()}
+			</Dragabble>
+		)
 	}
 
 }
