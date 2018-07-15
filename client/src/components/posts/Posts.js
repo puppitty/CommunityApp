@@ -15,12 +15,12 @@ class Posts extends Component {
     const { posts, loading } = this.props.post;
     let postContent
 
-    if(posts===null|| loading) {
-      postContent=<Spinner/>
+    if (posts === null || loading) {
+      postContent = <Spinner />
     }
-  else {
-    postContent=<PostFeed posts={posts}/>
-  }
+    else {
+      postContent = <PostFeed posts={posts} />
+    }
 
     return (
       <div className="feed">
@@ -28,7 +28,7 @@ class Posts extends Component {
           <div className="row">
             <div className="col-md-12">
               <PostForm />
-               {postContent}
+              {postContent}
             </div>
           </div>
         </div>

@@ -12,11 +12,11 @@ class CommentItem extends Component {
         <div className="row">
           <div className="col-md-2">
             {/*<Link to="profile.html">*/}
-              <img
-                className="rounded-circle d-none d-md-block"
-                src={comment.avatar}
-                alt=""
-              />
+            <img
+              className="rounded-circle d-none d-md-block"
+              src={comment.avatar}
+              alt=""
+            />
             {/*</Link>*/}
             <br />
             <p className="text-center">{comment.name}</p>
