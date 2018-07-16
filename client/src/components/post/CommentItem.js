@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { deleteComment } from "../../actions/postActions";
@@ -12,11 +12,11 @@ class CommentItem extends Component {
         <div className="row">
           <div className="col-md-2">
             {/*<Link to="profile.html">*/}
-            <img
-              className="rounded-circle d-none d-md-block"
-              src={comment.avatar}
-              alt=""
-            />
+              <img
+                className="rounded-circle d-none d-md-block"
+                src={comment.avatar}
+                alt=""
+              />
             {/*</Link>*/}
             <br />
             <p className="text-center">{comment.name}</p>

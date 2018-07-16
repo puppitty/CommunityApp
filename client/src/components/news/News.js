@@ -59,46 +59,51 @@ class News extends Component {
 
   render() {
     return (
-      <div className="container-fluid">
-        <div className="row">
-          {/* Form for article search */}
-          {/* Article result container */}
-          <div className="col-12">
-            <h2>
-              {this.state.articles.length
-                ? "Top News Stories"
-                : "Search for some articles"}
-            </h2>
-            <ul className="list-group list-group-flush">
-              {this
-                .state
-                .articles
-                .map(article => (
+      <div>
+        {" "}
+        <div className="container-fluid">
+          <div className="row">
+            {/* Form for article search */}
+            {/* Article result container */}
+            <div className="col-12">
+              <h2>
+                {this.state.articles.length
+                  ? "Top News Stories"
+                  : "Search for some articles"}
+              </h2>
 
-                  <li key={article.title} className="list-group-item d-flex ">
-
-                    <img
-                      className="img-thumbnai"
-                      style={{ width: "75px", height: "75px" }}
-                      src={article.multimedia.length > 0 ? article.multimedia[0].url : 'http://via.placeholder.com/75x75'}
-                      alt={article.title} />
-
-
-                    <a className="px-3" href={article.url} target="_blank">{article.title}
-                      <br />
-
-                      {article.abstract}
-                      <br />{moment(article.published_date).format("Do	MMMM YYYY hh:mm:ss a")}</a>
-
-
+              <ul className="list-group list-group-flush">
+                {this.state.articles.map(article => (
+                  <li
+                    key={article.title}
+                    className="list-group-item d-flex justify-content-between align-items-center"
+                  >
+                    <a href={article.url} target="_blank">
+                      <img
+                        className="img-thumbnail"
+                        style={{ width: "70px", height: "70px" }}
+                        src={article.multimedia.length>0 ? article.multimedia[0].url: 'https://via.placeholder.com/60x60' }
+                        alt={article.title}
+                      /> &nbsp;&nbsp;&nbsp;&nbsp;
+                      <strong>{article.title} -{" "}
+                      {moment(article.updated_date).format(
+                        "Do	MMMM YYYY"
+                      )} </strong>
+                    </a>
+                    {/*<span
+                      className="badge badge-primary badge-pill"
+                      onClick={() => this.saveArticle(article._id)}
+                    >
+                      Save Article
+                    </span>*/}
                   </li>
                 ))}
-            </ul>
+              </ul>
+            </div>
           </div>
-
         </div>
       </div>
-    )
+    );
   }
 }
 

@@ -7,11 +7,11 @@ const PrivateRoute = ({ component: Component, auth, ...rest }) => (
   <Route
     {...rest}
     render={props =>
-      auth.isAuthenticated === true ? (
+      ( (auth.isAuthenticated === true &&  auth.user.exp > Date.now()/1000 ) ? (
         <Component {...props} />
       ) : (
-        <Redirect to="/login" />
-      )
+        <Redirect to="/" />
+      ))
     }
   />
 );

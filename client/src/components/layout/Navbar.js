@@ -15,7 +15,11 @@ class Navbar extends Component {
 
     const authLinks = (
       <ul className="navbar-nav ml-auto">
-
+      <li className="nav-item">
+          <Link className="nav-link" to="/news">
+            News
+          </Link>
+        </li>
         <li>
         </li>
         <li className="nav-item">
@@ -24,16 +28,15 @@ class Navbar extends Component {
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/board">
-            Bulletin Board
+        <Link className="nav-link" to="/board">
+          Bulletin Board
         </Link>
-
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/news">
-            News
-          </Link>
-        </li>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/profile">
+          Profile
+        </Link>
+      </li>
         <li className="nav-item">
           <a href="" onClick={this.props.logoutUser} className="nav-link">
             <img
