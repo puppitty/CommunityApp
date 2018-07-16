@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
@@ -33,10 +33,10 @@ if (localStorage.jwtToken) {
   //Set the current user and isAuthenticated --> redux state 
   store.dispatch(setCurrentUser(decoded));
   //Check for expired Token
-  const currentTime = Date.now()/1000
-  if(decoded.exp<currentTime){
+  const currentTime = Date.now() / 1000
+  if (decoded.exp < currentTime) {
     store.dispatch(logoutUser())
-    window.location.href="/"
+    window.location.href = "/"
   }
 }
 class App extends Component {
@@ -49,26 +49,28 @@ class App extends Component {
             <Route exact path="/" component={Landing} />
             <div className="container">
               <Route exact path="/login" component={Login} />
-           
+
               <Route exact path="/register" component={Register} />
+
               <Switch>
-              <PrivateRoute exact path ="/news" component={News} />
+                <PrivateRoute exact path="/posts" component={Posts} />
               </Switch>
-            <Switch>
-            <PrivateRoute exact path ="/posts" component={Posts} />
-            </Switch>
-            <Switch>
-            <PrivateRoute exact path='/post/:id' component={Post}/>
-            </Switch>
-            <Switch>
-            <PrivateRoute exact path ="/board" component={Board} />
-            </Switch>
-            <Switch>
-            <PrivateRoute exact path ="/profile" component={EditProfile} />
-            </Switch>
-            <Switch>
-            <PrivateRoute exact path ="/password/:token" component={Password} />
-            </Switch>
+              <Switch>
+                <PrivateRoute exact path='/post/:id' component={Post} />
+              </Switch>
+              <Switch>
+                <PrivateRoute exact path="/board" component={Board} />
+              </Switch>
+              <Switch>
+                <PrivateRoute exact path="/news" component={News} />
+              </Switch>
+
+              <Switch>
+                <PrivateRoute exact path="/profile" component={EditProfile} />
+              </Switch>
+              <Switch>
+                <PrivateRoute exact path="/password/:token" component={Password} />
+              </Switch>
             </div>
             <Footer />
           </div>
