@@ -14,13 +14,13 @@ class Login extends Component {
 
   componentDidMount() {
     if(this.props.auth.isAuthenticated){
-      this.props.history.push("/posts")
+      this.props.history.push("/news")
     }
   }
 
   componentWillReceiveProps = nextProps => {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push("/posts");
+      this.props.history.push("/news");
     }
     if (nextProps.errors) {
       this.setState({

@@ -45,6 +45,12 @@ const UserSchema = new Schema({
     type: Boolean,
     default: false
   },
+  pwdresettoken:{
+    type:String
+  },
+  pwdresetexp:{
+    type:Number
+  },
   date: {
     type: Date,
     default: Date.now
