@@ -75,23 +75,28 @@ class News extends Component {
                 .articles
                 .map(article => (
 
-                  <li key={article.title} className="list-group-item d-flex ">
+                  <ul key={article.title} className="list-group-item d-flex ">
 
                     <img
                       className="img-thumbnail"
                       style={{ width: "75px", height: "75px" }}
                       src={article.multimedia.length > 0 ? article.multimedia[0].url : 'http://via.placeholder.com/75x75'}
+
+
                       alt={article.title} />
 
+                    <ul className="list-style-type-none" list-inline-item >
 
-                    <a className="px-3" href={article.url} target="_blank">{article.title}
-                      <br />
+                      <a className="px-1" href={article.url} target="_blank">{article.title}</a>
 
-                      {article.abstract}
-                      <br />{moment(article.published_date).format("Do	MMMM YYYY hh:mm:ss a")}</a>
+                      <ul className="px-1">
+                        {article.abstract}
+                      </ul>
+                      <ul className="px-1">{moment(article.published_date).format("Do	MMMM YYYY hh:mm:ss a")}
+                      </ul>
 
-
-                  </li>
+                    </ul>
+                  </ul>
                 ))}
             </ul>
           </div>

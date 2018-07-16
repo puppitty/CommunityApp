@@ -17,7 +17,7 @@ class PostForm extends Component {
       });
   };
   onChange = event => {
-    const {name,value}=event.target
+    const { name, value } = event.target
     this.setState({
       [name]: value
     });
@@ -36,10 +36,10 @@ class PostForm extends Component {
   };
 
   render() {
-    
+
     const { errors } = this.state;
     return (
-      <div className="post-form mb-3">
+      <div className="post-form mb-3"><h2>Welcome to your Township Community Page!</h2>
         <div className="card card-info">
           <div className="card-header bg-info text-white">Add Your Post...</div>
           <div className="card-body">
