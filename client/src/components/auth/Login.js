@@ -13,14 +13,14 @@ class Login extends Component {
   };
 
   componentDidMount() {
-    if(this.props.auth.isAuthenticated){
-      this.props.history.push("/news")
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push("/posts")
     }
   }
 
   componentWillReceiveProps = nextProps => {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push("/news");
+      this.props.history.push("/posts");
     }
     if (nextProps.errors) {
       this.setState({
@@ -55,7 +55,7 @@ class Login extends Component {
                 Sign in to your Community Connector account
               </p>
               <small className="form-text text-muted">
-                    (* = required)
+                (* = required)
                   </small>
               <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
