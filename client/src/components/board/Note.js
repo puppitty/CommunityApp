@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import FaPencil from 'react-icons/lib/fa/pencil'
 import FaTrash from 'react-icons/lib/fa/trash'
 import FaFloppyO from 'react-icons/lib/fa/floppy-o'
+import Dragabble from 'react-draggable';
+
 
 class Note extends Component {
 	constructor(props) {
@@ -26,12 +28,12 @@ class Note extends Component {
 	}
 
 	randomBetween(x, y, s) {
-		return x + Math.ceil(Math.random() * (y-x)) + s
+		return x + Math.ceil(Math.random() * (y - x)) + s
 	}
 
 	componentDidUpdate() {
 		var textArea
-		if(this.state.editing) {
+		if (this.state.editing) {
 			textArea = this._newText
 			textArea.focus()
 			textArea.select()
@@ -68,7 +70,7 @@ class Note extends Component {
 			<div className="note" style={this.style}>
 				<form onSubmit={this.save}>
 					<textarea ref={input => this._newText = input}
-							  defaultValue={this.props.children}/>
+						defaultValue={this.props.children} />
 					<button id="save"><FaFloppyO /></button>
 				</form>
 			</div>
@@ -87,7 +89,11 @@ class Note extends Component {
 		)
 	}
 	render() {
-		return this.state.editing ? this.renderForm() : this.renderDisplay()
+		return (
+			<Dragabble>
+				{this.state.editing ? this.renderForm() : this.renderDisplay()}
+			</Dragabble>
+		)
 	}
 
 }
