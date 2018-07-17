@@ -45,60 +45,67 @@ This app is designed to help improve communications within communities. Possibil
 ### ERD
 ![Flowchart Image](./notes/JSJSWIM_DB.png)
 
+### File Layout
+- Client
+  - public
+  - src
+    - App.css
+    - App.js
+    - index.css
+    - Folders:
+      - actions
+      - components
+        - auth
+        - board
+        - common
+        - layout
+        - news
+        - posts
+      - img
+      - reducers
+      - utils
+      - validation
+- config
+- models
+- notes
+- routes
+- validation
+- server.js
 
-### JSJ Swim School 
-* Home Page
+### Community Communicator 
+* Posts for Administor
 ![Home page](./notes/Homepage.PNG)
 
-* User Login
+* Posts for User
+![Home page](./notes/Homepage.PNG)
+
+* Bulletin Board
 ![Login](./notes/Login_Register.PNG)
 
 * User Sign-in 
 ![Sign-up Page](./notes/Signup.PNG)
 
-* Course Registration 
+* News Feed 
 ![Course Registration](./notes/Course_Registration.PNG)
 
-* Registration Confirmation
+* User Create login
 ![Registration Confirmation](./notes/Registered.PNG)
 
-* Courses  
-![Courses](./notes/Courses.png)
-
-* Courses - Error 
-![Courses Error](./notes/Error-AlreadySignedUp.PNG)
-
-* Registered Email 
-![Registered Email](./notes/RegisteredEmail.PNG)
-
-* Class Confirmation Email 
-![Class Confirmation Email](./notes/ClassSignUp.PNG)
-
-### Admin
-
-* Admin 
-![Admin](./notes/admin.PNG)
-
-* Class Descriptions 
-![Admin - Class Descriptions](./notes/Class_Description.PNG)
-
-* Class Instance 
-![Admin - Class Instance](./notes/Class_Instance.PNG)
 
 ### Quick Start
 
 To run a local / development copy:
 
-1. Update the config.json file:
-```json
-{
-  "development": {
-    "username": YOUR_USERNAME,
-    "password": YOUR_PASSWORD,
-    "database": "jsjswim_db",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  }
-}
+1. Download the file from Github
 
-2. Create a jsjswim_db database.
+2. CD into the directory and run npm install
+  - cd CommunityApp
+  - npm install
+  - cd client
+  - npm install
+3. Create .env file with:
+ 
+nytAPI=YOUR NYTimes API key here
+MONGODB_URI=YOUR Mongo DB info goes here
+secretOrKey=Your value
+weatherAPI=YOUR openweatherAPI key here
