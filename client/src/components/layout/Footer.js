@@ -1,5 +1,4 @@
 import React from "react";
-import "./Footer.css";
 import Github from "./Github.svg";
 import LinkedIn from "./LinkedIn.svg";
 
@@ -54,7 +53,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
 
         <div className="col-md-4 col-sm-12">
           <div class="card bg-dark text-white">
