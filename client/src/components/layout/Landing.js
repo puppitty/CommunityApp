@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import {Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 
 
 class Landing extends Component {
 
-  
+
   componentDidMount() {
-    if(this.props.auth.isAuthenticated){
+    if (this.props.auth.isAuthenticated) {
       this.props.history.push("/posts")
     }
   }
@@ -23,7 +23,7 @@ class Landing extends Component {
                 <h1 className="display-3 mb-4">Community Connector</h1>
                 <p className="lead">
                   {" "}
-                  Join Your Community, Create a profile, view community Posts, Comment and connect!
+                  Join Your Community, Create a Profile, View Community Posts, Comment and Connect!
                 </p>
                 <hr />
                 <Link to="/register" className="btn btn-lg btn-info mr-2">
@@ -41,11 +41,11 @@ class Landing extends Component {
   }
 }
 const mapStateToProps = state => ({
-  auth:state.auth
+  auth: state.auth
 })
 
 Landing.propTypes = {
-  auth:PropTypes.object.isRequired
+  auth: PropTypes.object.isRequired
 }
 
-export default connect(mapStateToProps, {})( Landing)
+export default connect(mapStateToProps, {})(Landing)
