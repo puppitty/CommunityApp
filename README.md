@@ -4,8 +4,8 @@ A React App to keep Community Members informed and connected
 Community Connector is a React App designed to keep Community Members involved, informed and connected.   
 
 It includes 4 components 
-- a Community Bulletin Board that lists all the open issues for the community and a place for each Community Member to be able to offer their feedback.  
-- a Bulletin Board to post your personal reminders
+- A Community Bulletin Board that lists all the open issues for the community and a place for each Community Member to be able to offer their feedback.  
+- A Bulletin Board to post your personal reminders
 - Top news feed from New York times
 - Weather to see the next week's weather forecast
 
@@ -20,9 +20,19 @@ This app is designed to help improve communications within communities. Possibil
 ## Built With:
 
 - axios,
+- bcryptjs, 
+- body-parser, 
 - classnames,
+- dotenv, 
+- express, 
+- gravatar, 
 - jwt-decode,
+- jsonwebtoken, 
 - moment,
+- mongoose, 
+- Mongo
+- passport, 
+- passport-jwt,
 - react, 
 - react-dom, 
 - react-draggable, 
@@ -33,16 +43,6 @@ This app is designed to help improve communications within communities. Possibil
 - react-scripts, 
 - redux, 
 - redux-thunk, 
-- bcryptjs, 
-- body-parser, 
-- dotenv, 
-- express, 
-- gravatar, 
-- jsonwebtoken, 
-- mongoose, 
-- Mongo
-- passport, 
-- passport-jwt,
 - New York times (API's)
 - openweather API
 
@@ -93,10 +93,10 @@ Clone the repository and then follow the steps below:
 - npm install
 - cd..
 - Create .env file with the following keys:
-  nytAPI=YOUR_NEWYORKTIMES_KEY
-  MONGODB_URI=YOUR_MONGO_DB_INFO
-  secretOrKey=YOUR_CODE
-  GOOGLE_GEOLOCATION_API_KEY=YOUR_GOOGLE_GEO_LOCATION
-  OPEN_WEATHER_API_KEY=YOUR_OPENWEATHERMAP_API
+  * nytAPI=YOUR_NEWYORKTIMES_KEY
+  *  MONGODB_URI=YOUR_MONGO_DB_INFO
+  *  secretOrKey=YOUR_CODE
+  *  GOOGLE_GEOLOCATION_API_KEY=YOUR_GOOGLE_GEO_LOCATION
+  *  OPEN_WEATHER_API_KEY=YOUR_OPENWEATHERMAP_API
 - npm run dev
 
