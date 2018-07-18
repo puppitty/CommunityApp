@@ -80,7 +80,7 @@ class News extends Component {
                     <img
                       className="img-thumbnail"
                       style={{ width: "75px", height: "75px" }}
-                      src={article.multimedia.length > 0 ? article.multimedia[0].url : 'http://via.placeholder.com/75x75'}
+                      src={article.multimedia.length > 0 ? article.multimedia[0].url : 'https://via.placeholder.com/75x75'}
 
 
                       alt={article.title} />
