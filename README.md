@@ -48,8 +48,6 @@ This app is designed to help improve communications within communities. Possibil
 
 
 ### ERD
-![Flowchart Image](./notes/CCModel1.png)
-
 ![Flowchart Image](./notes/CCModel2.png)
 
 
@@ -73,7 +71,7 @@ This app is designed to help improve communications within communities. Possibil
 ![Bulletin Board](./notes/bulletinboard.PNG)
 
 * Top News Feed  
-![Top News Feed](./notes/newsfeed.png)
+![Top News Feed](./notes/newsfeed.PNG)
 
 * Weather 
 ![Courses Error](./notes/weather.PNG)
